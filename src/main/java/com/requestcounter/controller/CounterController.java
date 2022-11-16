@@ -18,4 +18,9 @@ public class CounterController {
     public String getHello(@PathVariable("name") String name) {
         return counterService.getCounter(name);
     }
+
+    @GetMapping("/redis/{name}")
+    public String getHelloRedis(@PathVariable("name") String name) {
+        return counterService.getCounterRedis(name);
+    }
 }
